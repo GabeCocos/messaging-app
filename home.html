@@ -1,0 +1,7 @@
+<h1>All Statuses</h1>
+<a href="{% url 'post_status' %}">Post new status</a>
+<ul>
+  {% for s in statuses %}
+    <li><strong>{{ s.user.username }}</strong>: {{ s.content }} ({{ s.created_at }})</li>
+  {% endfor %}
+</ul>
